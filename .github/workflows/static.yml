@@ -34,8 +34,8 @@ jobs:
       - name: Compile CSS from SCSS files
         uses: gha-utilities/sass-build@v0.5.0
         with:
-          source: Sass/style.scss
-          destination: src/css/main.css
+          source: './Sass/style.scss'
+          destination: './src/css/style.css'
       - name: Add and Commit changes to pr-pages branch
         run: |
           git config --local user.email 'action@github.com'
