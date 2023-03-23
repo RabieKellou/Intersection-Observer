@@ -42,14 +42,7 @@ jobs:
           git config --local user.name 'GitHub Action'
           git add src/css/*
           git commit -m 'Updates compiled CSS files'
-      - uses: actions/upload-artifact@master
-        with:
-          name: build-artifact
-          path: artifact
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          git push
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
